@@ -1,8 +1,8 @@
+/*
+    Alexandre Vieira Da Silva - 2512130008
+    Exercício 01
+*/
 #include <stdio.h>
-
-void dobro(int &ref){
-    ref = ref * 2;
-}
 
 void troca(int *a, int *b) 
 {
@@ -15,9 +15,6 @@ int main()
 {
     int x, y;
 
-    printf("digite o valor de n: ");
-    scanf("%d", &n);
-
     printf("Escolha o valor de x: ");
     scanf("%d", &x);
 
@@ -29,14 +26,6 @@ int main()
     troca(&x, &y);
 
     printf("Depois: x=%d, y=%d\n", x, y);
-
-    int n;
-
-    printf("digite o valor de n: ");
-    scanf("%d", &n);
-
-    dobro(n);
-    printf("%d\n", n);
 
     return 0;
 }

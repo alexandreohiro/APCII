@@ -1,13 +1,20 @@
 /*
     Alexandre Vieira Da Silva - 2512130008
-    Exercício 2
+    Exercício 02
 */
 #include <stdio.h>
 
-void divisao(int num1, int num2, float *resultado) 
+void divisao(double num1, double num2, double *resultado) 
 {
-    if (num2 != 0) {
-        *resultado = (float)num1 / num2;
+    if (num2 != 0) 
+    {
+        *resultado = (double)num1 / num2;
+    } 
+    else 
+    {
+        printf("Erro: Divisão por zero!\n");
+        *resultado = 0;
+        return;
     }
 }
 
@@ -21,7 +28,7 @@ int main()
     printf("Escolha o valor de b: ");
     scanf("%d", &b);
 
-    float res;
+    double res;
 
     divisao(a, b, &res);
 

@@ -8,7 +8,8 @@ Exercicio 04 - a) - Alexandre Vieira Da Silva - 2512130008
 
 char tela[LARGURA][ALTURA];
 
-void limpar_tela() {
+void limpar_tela() 
+{
     int x, y;
     for (x = 0; x < LARGURA; x++) {
         for (y = 0; y < ALTURA; y++) {
@@ -17,17 +18,20 @@ void limpar_tela() {
     }
 }
 
-int dentro_da_tela(int x, int y) {
+int dentro_da_tela(int x, int y) 
+{
     return (x >= 0 && x < LARGURA && y >= 0 && y < ALTURA);
 }
 
-void set_pixel(int x, int y) {
+void set_pixel(int x, int y) 
+{
     if (dentro_da_tela(x, y)) {
         tela[x][y] = '@';
     }
 }
 
-void imprimir_tela() {
+void imprimir_tela() 
+{
     int x, y;
     for (y = ALTURA - 1; y >= 0; y--) {
         for (x = 0; x < LARGURA; x++) {
@@ -37,13 +41,15 @@ void imprimir_tela() {
     }
 }
 
-int arredonda(double v) {
+int arredonda(double v) 
+{
     if (v >= 0) return (int)(v + 0.5);
     else return (int)(v - 0.5);
 }
 
 // ----------- Função da Questão 4(a) -----------
-void desenhar_reta(int x1, int y1, int x2, int y2) {
+void desenhar_reta(int x1, int y1, int x2, int y2) 
+{
     int x, y;
     if (x1 == x2) { // vertical
         int y_min = (y1 < y2) ? y1 : y2;
@@ -81,7 +87,8 @@ void desenhar_reta(int x1, int y1, int x2, int y2) {
     set_pixel(x2, y2);
 }
 
-int main() {
+int main() 
+{
     limpar_tela();
 
     int x1, y1, x2, y2;
