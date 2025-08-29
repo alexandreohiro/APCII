@@ -12,19 +12,25 @@ void exibir_equacao_geral_da_reta(double x1, double y1, double x2, double y2) //
     printf("Equacao geral da reta: ");
     printf("%.4f*x ", a);
 
-    if (b >= 0) printf("+ %.4f*y ", b);
-    else        printf("- %.4f*y ", -b);
+    if (b >= 0)
+        printf("+ %.4f*y ", b);
+    else
+        printf("- %.4f*y ", -b);
 
-    if (c >= 0) printf("+ %.4f = 0\n", c);
-    else        printf("- %.4f = 0\n", -c);
+    if (c >= 0)
+        printf("+ %.4f = 0\n", c);
+    else
+        printf("- %.4f = 0\n", -c);
 }
 
-int main() 
+int main()
 {
     double x1, y1, x2, y2;
+
     printf("Digite x1 y1 x2 y2: ");
     scanf("%lf %lf %lf %lf", &x1, &y1, &x2, &y2);
 
     exibir_equacao_geral_da_reta(x1, y1, x2, y2);
+
     return 0;
 }

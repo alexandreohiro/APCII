@@ -1,31 +1,35 @@
 /*
     Alexandre Vieira Da Silva - 2512130008
     Exercício 03 parte 3
+    3. Escreva uma função que receba como parâmetro as matrizes A de dimensão m x n, B de dimensão n x
+    p e uma matriz resultante C de dimensão m x p. A função deve realizar a multiplicação das matrizes A
+    e B e armazenar o valor resultante em C, conforme exemplo a seguir.
 */
 #include <stdio.h>
 
-void multiplicarMatrizes(int m, int n, int p, int A[m][n], int B[n][p], int C[m][p]) {
-    for(int i=0;i<m;i++)
+void multiplicarMatrizes(int m, int n, int p, int A[m][n], int B[n][p], int C[m][p])
+{
+    for (int i = 0; i < m; i++)
     {
-        for(int j=0;j<p;j++)
+        for (int j = 0; j < p; j++)
         {
-            C[i][j]=0;
-            for(int k=0;k<n;k++)
+            C[i][j] = 0;
+            for (int k = 0; k < n; k++)
             {
-                C[i][j]+=A[i][k]*B[k][j];
+                C[i][j] += A[i][k] * B[k][j];
             }
         }
     }
 }
 
-int main() 
+int main()
 {
     int A[2][3], B[3][2], C[2][2];
 
     printf("Digite os valores da matriz A (2x3):\n");
-    for(int i = 0; i < 2; i++) 
+    for (int i = 0; i < 2; i++)
     {
-        for(int j = 0; j < 3; j++) 
+        for (int j = 0; j < 3; j++)
         {
             printf("A[%d][%d]: ", i, j);
             scanf("%d", &A[i][j]);
@@ -33,22 +37,23 @@ int main()
     }
 
     printf("Digite os valores da matriz B (3x2):\n");
-    for(int i = 0; i < 3; i++) 
+    for (int i = 0; i < 3; i++)
     {
-        for(int j = 0; j < 2; j++) 
+        for (int j = 0; j < 2; j++)
         {
             printf("B[%d][%d]: ", i, j);
             scanf("%d", &B[i][j]);
         }
     }
-    
-    multiplicarMatrizes(2,3,2,A,B,C);
-    
-    for(int i=0;i<2;i++)
+
+    multiplicarMatrizes(2, 3, 2, A, B, C);
+
+    for (int i = 0; i < 2; i++)
     {
-        for(int j=0;j<2;j++) printf("%d ", C[i][j]);
+        for (int j = 0; j < 2; j++)
+            printf("%d ", C[i][j]);
         printf("\n");
     }
-    
+
     return 0;
 }

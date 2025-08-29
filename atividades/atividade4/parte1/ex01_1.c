@@ -1,17 +1,18 @@
 /*
     Alexandre Vieira Da Silva - 2512130008
     Exercício 01
+    1. Escreva uma função que realize a troca entre dois parâmetros passados a função utilizandoponteiros.
 */
 #include <stdio.h>
 
-void troca(int *a, int *b) 
+void troca(int *a, int *b)
 {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-int main() 
+int main()
 {
     int x, y;
 
